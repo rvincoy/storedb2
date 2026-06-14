@@ -27,8 +27,13 @@ passport.use(new GoogleStrategy({
     return done(null, profile);
 }));
 
-passport.serializeUser((user, done) => done(null, user));
-passport.deserializeUser((id, done) => done(null, user));
+passport.serializeUser((user, done) => {
+    done(null, user);
+});
+
+passport.deserializeUser((user, done) => {
+    done(null, user);
+});
 
 app.get("/", (req, res) => {
     res.send("<a href='/auth/google'>Login with Google</a>");

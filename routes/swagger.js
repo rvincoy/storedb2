@@ -2,6 +2,13 @@ const router = require('express').Router();
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('../swagger.json');
 
-router.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+function requireAuth(req, res, next) {
+  if (req.session && req.session.user) {
+    return next(); // user is authenticated
+  }
+  return res.status(401).send('Unauthorized');
+}
+
+router.use('/api-docs', requireAuth, swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 module.exports = router;

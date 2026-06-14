@@ -12,7 +12,7 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 app.use(session({
     secret: 'your_secret_key',
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: true
 }));
 
 app.use(passport.initialize());
@@ -27,14 +27,8 @@ passport.use(new GoogleStrategy({
     return done(null, profile);
 }));
 
-passport.serializeUser((user, done) => {
-    done(null, user.id);
-});
-
-passport.deserializeUser((id, done) => {
-    // In a real application, you would fetch the user from the database here
-    done(null, { id });
-});
+passport.serializeUser((user, done) => done(null, user));
+passport.deserializeUser((id, done) => done(null, user));
 
 app.get("/", (req, res) => {
     res.send("<a href='/auth/google'>Login with Google</a>");

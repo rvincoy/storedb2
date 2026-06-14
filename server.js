@@ -12,7 +12,7 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 app.use(session({
     secret: 'your_secret_key',
     resave: false,
-    saveUninitialized: true
+    saveUninitialized: false
 }));
 
 app.use(passport.initialize());

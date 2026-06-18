@@ -9,6 +9,6 @@ function requireAuth(req, res, next) {
   return res.status(401).send('Unauthorized');
 }
 
-router.use('/api-docs', requireAuth, swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+router.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 module.exports = router;

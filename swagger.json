@@ -180,7 +180,7 @@
             "schema": {
               "type": "object",
               "properties": {
-                "ProoductID": {
+                "ProductID": {
                   "example": "any"
                 },
                 "ProductName": {
@@ -262,7 +262,7 @@
             "schema": {
               "type": "object",
               "properties": {
-                "ProoductID": {
+                "ProductID": {
                   "example": "any"
                 },
                 "ProductName": {

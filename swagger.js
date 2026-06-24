@@ -9,14 +9,14 @@ const doc = {
   schemes: ['https'],
   components: {
     schemas: {
-      product: {
+      Products: {
         ProductName: 'string',
         Description: 'string',
         Category: 'string',
         Price: 'number',
         Stock: 'number'
       },
-      ledgers: {
+      Ledgers: {
         ProductID: 'string',
         ProductName: 'string',
         Description: 'string',

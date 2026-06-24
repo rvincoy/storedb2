@@ -29,7 +29,7 @@ const getSingle = async (req, res, next) => {
 const createLedger = async (req, res, next) => {
   try {
     const ledger = {
-      ProuctID: req.body.ProductID,
+      ProductID: req.body.ProductID,
       ProductName: req.body.ProductName,
       Description: req.body.Description,
       Category: req.body.Category,

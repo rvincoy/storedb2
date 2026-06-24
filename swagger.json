@@ -91,7 +91,7 @@
         }
       },
       "put": {
-        "description": "",
+        "description": "Updates a specific product by ID",
         "parameters": [
           {
             "name": "id",
@@ -248,7 +248,7 @@
         }
       },
       "put": {
-        "description": "Creates a new ledger entry",
+        "description": "Updates a specific ledger by ID",
         "parameters": [
           {
             "name": "id",

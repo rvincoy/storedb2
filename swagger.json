@@ -13,7 +13,7 @@
   "paths": {
     "/products/": {
       "get": {
-        "description": "",
+        "description": "Gets all products from the database",
         "produces": [
           "application/json"
         ],
@@ -36,19 +36,19 @@
               "type": "object",
               "properties": {
                 "ProductName": {
-                  "example": "any"
+                  "example": "string"
                 },
                 "Description": {
-                  "example": "any"
+                  "example": "string"
                 },
                 "Category": {
-                  "example": "any"
+                  "example": "string"
                 },
                 "Price": {
-                  "example": "any"
+                  "example": 999.99
                 },
                 "Stock": {
-                  "example": "any"
+                  "example": 999
                 }
               }
             }
@@ -106,19 +106,19 @@
               "type": "object",
               "properties": {
                 "ProductName": {
-                  "example": "any"
+                  "example": "string"
                 },
                 "Description": {
-                  "example": "any"
+                  "example": "string"
                 },
                 "Category": {
-                  "example": "any"
+                  "example": "string"
                 },
                 "Price": {
-                  "example": "any"
+                  "example": 999.99
                 },
                 "Stock": {
-                  "example": "any"
+                  "example": 999
                 }
               }
             }
@@ -181,31 +181,31 @@
               "type": "object",
               "properties": {
                 "ProductID": {
-                  "example": "any"
+                  "example": "string"
                 },
                 "ProductName": {
-                  "example": "any"
+                  "example": "string"
                 },
                 "Description": {
-                  "example": "any"
+                  "example": "string"
                 },
                 "Category": {
-                  "example": "any"
+                  "example": "string"
                 },
                 "CoGS": {
-                  "example": "any"
+                  "example": 999.99
                 },
                 "Quantity": {
-                  "example": "any"
+                  "example": 999
                 },
                 "Price": {
-                  "example": "any"
+                  "example": 999.99
                 },
                 "TotalPrice": {
-                  "example": "any"
+                  "example": 999.99
                 },
                 "DateOfPurchase": {
-                  "example": "any"
+                  "example": "Jan 1, 2026"
                 }
               }
             }
@@ -263,31 +263,31 @@
               "type": "object",
               "properties": {
                 "ProductID": {
-                  "example": "any"
+                  "example": "string"
                 },
                 "ProductName": {
-                  "example": "any"
+                  "example": "string"
                 },
                 "Description": {
-                  "example": "any"
+                  "example": "string"
                 },
                 "Category": {
-                  "example": "any"
+                  "example": "string"
                 },
                 "CoGS": {
-                  "example": "any"
+                  "example": 999.99
                 },
                 "Quantity": {
-                  "example": "any"
+                  "example": 999
                 },
                 "Price": {
-                  "example": "any"
+                  "example": 999.99
                 },
                 "TotalPrice": {
-                  "example": "any"
+                  "example": 999.99
                 },
                 "DateOfPurchase": {
-                  "example": "any"
+                  "example": "Jan 1, 2026"
                 }
               }
             }

@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "My API",
+    "title": "Store DB API",
     "description": "Store DB API documentation",
     "version": "1.0.0"
   },
@@ -323,6 +323,28 @@
             "description": "Internal Server Error"
           }
         }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "product": {
+        "ProductName": "string",
+        "Description": "string",
+        "Category": "string",
+        "Price": "number",
+        "Stock": "number"
+      },
+      "ledgers": {
+        "ProductID": "string",
+        "ProductName": "string",
+        "Description": "string",
+        "Category": "string",
+        "CoGS": "number",
+        "Quantity": "number",
+        "Price": "number",
+        "TotalPrice": "number",
+        "DateOfPurchase": "date"
       }
     }
   }

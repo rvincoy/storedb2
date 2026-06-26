@@ -6,7 +6,15 @@ const doc = {
     description: 'Store DB API documentation'
   },
   host: 'storedb-wyw9.onrender.com',
-  schemes: ['https']
+  schemes: ['https'],
+  securityDefinitions: {
+    BearerAuth: {
+      type: 'apiKey',
+      in: 'header',
+      name: 'Authorization',
+      description: 'Enter: Bearer <your JWT token>'
+    }
+  }
 };
 
 const outputFile = './swagger.json';

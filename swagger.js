@@ -2,7 +2,7 @@ const swaggerAutogen = require('swagger-autogen')();
 
 const doc = {
   info: {
-    title: 'My API',
+    title: 'Store DB API',
     description: 'Store DB API documentation'
   },
   host: 'storedb-wyw9.onrender.com',
@@ -13,6 +13,28 @@ const doc = {
       in: 'header',
       name: 'Authorization',
       description: 'Enter: Bearer <your JWT token>'
+    }
+  },
+  components: {
+    schemas: {
+      Products: {
+        ProductName: 'string',
+        Description: 'string',
+        Category: 'string',
+        Price: 'number',
+        Stock: 'number'
+      },
+      Ledgers: {
+        ProductID: 'string',
+        ProductName: 'string',
+        Description: 'string',
+        Category: 'string',
+        CoGS: 'number',
+        Quantity: 'number',
+        Price: 'number',
+        TotalPrice: 'number',
+        DateOfPurchase: 'date'
+      }
     }
   }
 };

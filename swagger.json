@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "My API",
+    "title": "Store DB API",
     "description": "Store DB API documentation",
     "version": "1.0.0"
   },
@@ -21,7 +21,7 @@
   "paths": {
     "/products/": {
       "get": {
-        "description": "",
+        "description": "Gets all products from the database",
         "produces": [
           "application/json"
         ],
@@ -35,7 +35,7 @@
         }
       },
       "post": {
-        "description": "",
+        "description": "Creates a new product",
         "parameters": [
           {
             "name": "body",
@@ -44,19 +44,19 @@
               "type": "object",
               "properties": {
                 "ProductName": {
-                  "example": "any"
+                  "example": "string"
                 },
                 "Description": {
-                  "example": "any"
+                  "example": "string"
                 },
                 "Category": {
-                  "example": "any"
+                  "example": "string"
                 },
                 "Price": {
-                  "example": "any"
+                  "example": 999.99
                 },
                 "Stock": {
-                  "example": "any"
+                  "example": 999
                 }
               }
             }
@@ -82,7 +82,7 @@
     },
     "/products/{id}": {
       "get": {
-        "description": "",
+        "description": "Gets a specific product by ID",
         "produces": [
           "application/json"
         ],
@@ -104,7 +104,7 @@
         }
       },
       "put": {
-        "description": "",
+        "description": "Updates a specific product by ID",
         "parameters": [
           {
             "name": "id",
@@ -119,19 +119,19 @@
               "type": "object",
               "properties": {
                 "ProductName": {
-                  "example": "any"
+                  "example": "string"
                 },
                 "Description": {
-                  "example": "any"
+                  "example": "string"
                 },
                 "Category": {
-                  "example": "any"
+                  "example": "string"
                 },
                 "Price": {
-                  "example": "any"
+                  "example": 999.99
                 },
                 "Stock": {
-                  "example": "any"
+                  "example": 999
                 }
               }
             }
@@ -155,7 +155,7 @@
         ]
       },
       "delete": {
-        "description": "",
+        "description": "Deletes a specific product by ID",
         "parameters": [
           {
             "name": "id",
@@ -181,7 +181,7 @@
     },
     "/ledgers/": {
       "get": {
-        "description": "",
+        "description": "Gets all ledgers from the database",
         "produces": [
           "application/json"
         ],
@@ -195,7 +195,7 @@
         }
       },
       "post": {
-        "description": "",
+        "description": "Creates a new ledger entry",
         "parameters": [
           {
             "name": "body",
@@ -204,31 +204,31 @@
               "type": "object",
               "properties": {
                 "ProductID": {
-                  "example": "any"
+                  "example": "string"
                 },
                 "ProductName": {
-                  "example": "any"
+                  "example": "string"
                 },
                 "Description": {
-                  "example": "any"
+                  "example": "string"
                 },
                 "Category": {
-                  "example": "any"
+                  "example": "string"
                 },
                 "CoGS": {
-                  "example": "any"
+                  "example": 999.99
                 },
                 "Quantity": {
-                  "example": "any"
+                  "example": 999
                 },
                 "Price": {
-                  "example": "any"
+                  "example": 999.99
                 },
                 "TotalPrice": {
-                  "example": "any"
+                  "example": 999.99
                 },
                 "DateOfPurchase": {
-                  "example": "any"
+                  "example": "Jan 1, 2026"
                 }
               }
             }
@@ -254,7 +254,7 @@
     },
     "/ledgers/{id}": {
       "get": {
-        "description": "",
+        "description": "Gets a specific ledger entry by ID",
         "produces": [
           "application/json"
         ],
@@ -276,7 +276,7 @@
         }
       },
       "put": {
-        "description": "",
+        "description": "Updates a specific ledger by ID",
         "parameters": [
           {
             "name": "id",
@@ -291,31 +291,31 @@
               "type": "object",
               "properties": {
                 "ProductID": {
-                  "example": "any"
+                  "example": "string"
                 },
                 "ProductName": {
-                  "example": "any"
+                  "example": "string"
                 },
                 "Description": {
-                  "example": "any"
+                  "example": "string"
                 },
                 "Category": {
-                  "example": "any"
+                  "example": "string"
                 },
                 "CoGS": {
-                  "example": "any"
+                  "example": 999.99
                 },
                 "Quantity": {
-                  "example": "any"
+                  "example": 999
                 },
                 "Price": {
-                  "example": "any"
+                  "example": 999.99
                 },
                 "TotalPrice": {
-                  "example": "any"
+                  "example": 999.99
                 },
                 "DateOfPurchase": {
-                  "example": "any"
+                  "example": "Jan 1, 2026"
                 }
               }
             }
@@ -339,7 +339,7 @@
         ]
       },
       "delete": {
-        "description": "",
+        "description": "Deletes a specific ledger entry by ID",
         "parameters": [
           {
             "name": "id",
@@ -361,6 +361,28 @@
             "BearerAuth": []
           }
         ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Products": {
+        "ProductName": "string",
+        "Description": "string",
+        "Category": "string",
+        "Price": "number",
+        "Stock": "number"
+      },
+      "Ledgers": {
+        "ProductID": "string",
+        "ProductName": "string",
+        "Description": "string",
+        "Category": "string",
+        "CoGS": "number",
+        "Quantity": "number",
+        "Price": "number",
+        "TotalPrice": "number",
+        "DateOfPurchase": "date"
       }
     }
   }

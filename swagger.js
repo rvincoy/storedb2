@@ -7,6 +7,14 @@ const doc = {
   },
   host: 'storedb-wyw9.onrender.com',
   schemes: ['https'],
+  securityDefinitions: {
+    BearerAuth: {
+      type: 'apiKey',
+      in: 'header',
+      name: 'Authorization',
+      description: 'Enter: Bearer <your JWT token>'
+    }
+  },
   components: {
     schemas: {
       Products: {

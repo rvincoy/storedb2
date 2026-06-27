@@ -16,6 +16,19 @@ const doc = {
         Price: 'number',
         Stock: 'number'
       },
+      Returns: {
+        ProductName: 'string',
+        Description: 'string',
+        Category: 'string',
+        Price: 'number',
+        Stock: 'number'
+      },
+      Users: {
+        UserName: 'string',
+        DisplayName: 'string',
+        email: 'string',
+        Role: 'string'
+      },
       Ledgers: {
         ProductID: 'string',
         ProductName: 'string',

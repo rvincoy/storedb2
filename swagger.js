@@ -2,11 +2,54 @@ const swaggerAutogen = require('swagger-autogen')();
 
 const doc = {
   info: {
-    title: 'My API',
+    title: 'Store DB API',
     description: 'Store DB API documentation'
   },
   host: 'storedb-wyw9.onrender.com',
-  schemes: ['https']
+  schemes: ['https'],
+  securityDefinitions: {
+    BearerAuth: {
+      type: 'apiKey',
+      in: 'header',
+      name: 'Authorization',
+      description: 'Enter: Bearer <your JWT token>'
+    }
+  },
+  components: {
+    schemas: {
+      Products: {
+        ProductName: 'string',
+        Description: 'string',
+        Category: 'string',
+        Price: 'number',
+        Stock: 'number'
+      },
+      Returns: {
+        ProductName: 'string',
+        Description: 'string',
+        Category: 'string',
+        Price: 'number',
+        Stock: 'number'
+      },
+      Users: {
+        UserName: 'string',
+        DisplayName: 'string',
+        email: 'string',
+        Role: 'string'
+      },
+      Ledgers: {
+        ProductID: 'string',
+        ProductName: 'string',
+        Description: 'string',
+        Category: 'string',
+        CoGS: 'number',
+        Quantity: 'number',
+        Price: 'number',
+        TotalPrice: 'number',
+        DateOfPurchase: 'date'
+      }
+    }
+  }
 };
 
 const outputFile = './swagger.json';

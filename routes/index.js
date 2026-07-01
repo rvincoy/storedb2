@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { requireAuth, requireRole } = require("../middleware/auth");
-const { deleteUserHandler } = require('../controllers/users');
+const { deleteUserHandler } = require('../controllers/oauthusers');
 
 router.use('/', require('./swagger'));
 router.use('/products', require('./products'));
